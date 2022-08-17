@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_navigation"
+    app:startDestination="@id/fragmentSetting">
+
+    <fragment
+        android:id="@+id/fragmentSetting"
+        android:name="com.example.toolbar.fragment.FragmentSetting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_fragmentSetting_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_fragmentSetting_to_fragmentLeaveBalance"
+            app:destination="@id/fragmentLeaveBalance" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.toolbar.fragment.FragmentProfile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fragmentLeaveBalance"
+        android:name="com.example.toolbar.fragment.FragmentLeaveBalance"
+        android:label="Leave Balance"
+        tools:layout="@layout/fragment_leave_balance" />
+</navigation>
